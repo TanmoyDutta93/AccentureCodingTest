@@ -1,0 +1,34 @@
+<html>
+<head><title>Get Keys</title></head>
+<body>
+<script type="text/javascript">
+console.log("Input: ");
+var obj = {
+    a: 5,
+    b: {
+        c: {
+            d: 10,
+            e: {
+                f: 15
+            }
+        }
+    }
+};
+var arrKeys = [];
+console.log(obj);
+console.log("Output: ");
+console.log(getKeys(obj));
+
+function getKeys(inputObject) {
+    for (var key in inputObject) {
+        arrKeys.push(key);
+        if (inputObject[key] instanceof Object) {
+            arrKeys = getKeys(inputObject[key]);
+        }
+    }
+    return arrKeys;
+}
+
+</script>
+</body>
+</html>

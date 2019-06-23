@@ -1,0 +1,24 @@
+<html>
+<head><title>Reverse String</title></head>
+<body>
+<script type="text/javascript">
+var inputString = "Hello World";
+console.log("Input: " + inputString);
+console.log("Output with split and reverse: " + getReversedStringWithSplitAndReverse(inputString));
+console.log("Output without split and reverse: " + getReversedStringWithOutSplitAndReverse(inputString));
+
+function getReversedStringWithSplitAndReverse(inputStr) {
+    return inputStr.split('').reverse().join('').toString();
+}
+function getReversedStringWithOutSplitAndReverse(inputStr) {
+    var outputString = [];
+    for (var i = inputStr.length - 1; i >= 0; i--) {
+        outputString.push(inputStr.charAt(i));
+    }
+    return outputString.join("").toString();
+}
+
+
+</script>
+</body>
+</html>

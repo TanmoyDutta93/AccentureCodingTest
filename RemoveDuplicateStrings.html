@@ -1,0 +1,19 @@
+<html>
+<head><title>Remove Duplicate Strings</title></head>
+<body>
+<script type="text/javascript">
+var inputStringArray = ["apple", "banana", "apple", "mango", "orange", "apple", "orange"];
+console.log("Input: ");
+console.log(inputStringArray);
+console.log("Output: ");
+console.log(getDistinctStringArray(inputStringArray));
+
+function getDistinctStringArray(inptStrArr) {
+    return inptStrArr.filter(function (value, index) {
+        return index == inptStrArr.indexOf(value);
+    });
+}
+
+</script>
+</body>
+</html>

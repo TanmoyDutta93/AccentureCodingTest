@@ -1,0 +1,26 @@
+<html>
+<head><title>Array to Map</title></head>
+<body>
+<script type="text/javascript">
+var strArray = ["hello world","hello world"];
+console.log("Input:");
+console.log(strArray);
+var result = getCharCount(strArray);
+console.log("Output:");
+console.log(result);
+function getCharCount(strArrayInput) {
+    var strInput = strArrayInput.join('').toString();
+    var charCountMap = new Map();
+    for (var i = 0; i < strInput.length; i++) {
+        var char = strInput.charAt(i);
+        if (charCountMap.has(char)) {
+            charCountMap.set(char, charCountMap.get(char) + 1);
+        } else {
+            charCountMap.set(char, 1);
+        }
+    }
+    return charCountMap;
+}
+</script>
+</body>
+</html>
